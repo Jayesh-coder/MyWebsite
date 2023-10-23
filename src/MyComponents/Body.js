@@ -4,7 +4,7 @@ import "./Body.css";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 export const Body = () => {
   let myStyle = {
-    minHeight: "70vh",
+    minHeight: "65vh",
     margin: "40px auto",
     padding: "20vh",
   };

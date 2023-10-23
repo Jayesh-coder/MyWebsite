@@ -5,6 +5,7 @@ import { Body } from "./MyComponents/Body";
 import backgroundImage from "./background2.gif";
 import React, { useState, useEffect } from "react";
 import { Footer } from "./MyComponents/Footer";
+import { Icons } from "./MyComponents/Icons";
 function App() {
   const divStyle = {
     backgroundImage: `url(${backgroundImage})`,
@@ -31,6 +32,7 @@ function App() {
         <div style={divStyle}>
           <Header />
           <Body />
+          <Icons />
           <Footer />
         </div>
       )}
