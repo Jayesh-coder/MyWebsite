@@ -1,15 +1,18 @@
 import React from "react";
+import { Link, useLocation } from "react-router-dom"; // Assuming you are using React Router for routing
 
 export const Header = () => {
+  const location = useLocation(); // Get the current route location
+
   return (
     <nav
       className="navbar navbar-expand-lg border"
       style={{ backgroundColor: "rgba(52, 51, 51, 0.5)" }}
     >
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
+        <Link className="navbar-brand" to="/">
           Jayesh.
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -23,15 +26,23 @@ export const Header = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
+            <li
+              className={`nav-item ${
+                location.pathname === "/" ? "active" : ""
+              }`}
+            >
+              <Link className="nav-link" to="/">
                 Home
-              </a>
+              </Link>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
+            <li
+              className={`nav-item ${
+                location.pathname === "/about" ? "active" : ""
+              }`}
+            >
+              <Link className="nav-link" to="/about">
                 About
-              </a>
+              </Link>
             </li>
             <li className="nav-item dropdown">
               <a

@@ -6,6 +6,9 @@ import backgroundImage from "./background2.gif";
 import React, { useState, useEffect } from "react";
 import { Footer } from "./MyComponents/Footer";
 import { Icons } from "./MyComponents/Icons";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { About } from "./MyComponents/About";
+
 function App() {
   const divStyle = {
     backgroundImage: `url(${backgroundImage})`,
@@ -30,10 +33,25 @@ function App() {
         <Loading /> // Show the loading animation while data is loading
       ) : (
         <div style={divStyle}>
-          <Header />
-          <Body />
-          <Icons />
-          <Footer />
+          <Router>
+            <Header />
+            <Routes>
+              <Route
+                exact
+                path="/"
+                element={
+                  <>
+                    <Body />
+                    <Icons />
+                  </>
+                }
+              />
+            </Routes>
+            <Routes>
+              <Route exact path="/about" element={<About />} />
+            </Routes>
+            <Footer />
+          </Router>
         </div>
       )}
     </>
