@@ -1,0 +1,35 @@
+.pixel-card {
+  width: 144px; /* Width of 18rem in pixels */
+  border: 1px solid #000;
+  font-family: monospace; /* Use a monospace font for a pixelated look */
+}
+
+.pixel-img {
+  width: 144px; /* Width of the card image */
+  height: 144px; /* Height of the card image */
+  background: #000; /* Background color for the image */
+}
+
+.pixel-body {
+  padding: 8px;
+}
+
+.pixel-title {
+  font-size: 10px; /* Adjust font size to match the pixel size */
+  margin: 4px 0;
+}
+
+.pixel-text {
+  font-size: 8px; /* Adjust font size to match the pixel size */
+  margin: 4px 0;
+}
+
+.pixel-button {
+  display: inline-block;
+  background: #000; /* Background color for the button */
+  color: #fff; /* Text color for the button */
+  padding: 4px 8px;
+  text-decoration: none;
+  font-size: 8px; /* Adjust font size to match the pixel size */
+  margin-top: 8px;
+}

@@ -57,7 +57,7 @@ export const Header = () => {
               <ul className="dropdown-menu">
                 <li>
                   <a className="dropdown-item" href="#">
-                    Action
+                    Have fun🎮
                   </a>
                 </li>
                 <li>
